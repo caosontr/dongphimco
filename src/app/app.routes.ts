@@ -1,12 +1,13 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
-import { ProductListComponent,  } from './pages/admin/products/products.component';
+import { ProductListComponent } from './pages/admin/products/products.component';
+import { AddProductComponent  } from './pages/admin/add-product/add-product.component';
 import { AdminComponent } from './layouts/admin/admin.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
-
+import { EditProductComponent } from './pages/admin/edit-product/edit-product.component';
 
 export const routes: Routes = [
   
@@ -20,6 +21,8 @@ export const routes: Routes = [
     component: AdminComponent,
     children: [
       { path: 'products', component: ProductListComponent },
+      { path: 'add-product', component: AddProductComponent },
+      { path: 'edit-product', component: EditProductComponent },
       
     ],
   },

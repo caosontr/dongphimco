@@ -1,0 +1,164 @@
+{
+  "products": [
+    {
+      "id": "664f094399cd7b03c98707b0",
+      "name": "Roccat Vulcan 121",
+      "price": 179,
+      "category": "Bàn phím cơ",
+      "description": "Bàn phím cơ có dây, Switch Roccat Titan, đèn nền RGB AIMO, thiết kế siêu mỏng",
+      "image": "https://lh6.googleusercontent.com/proxy/7e5UzpKPDn1Cx8B_7zSdxZouKr2GaF0Vjqsh-XG_d8dLyjus5NHEUsCQkXfkcp5NxqfuyhpgF4cA58qbFSLqyMPSNU5Po1N_sXbHJzwCBLNAN1g5N7YvHqGTgdi1CibH2w",
+      "brand": "Roccat",
+      "rating": 4.7,
+      "isShow": true
+    },
+    {
+      "id": "664f148a99cd7b03c987080c",
+      "name": "Asus ROG Strix Scope RX",
+      "price": 169,
+      "category": "Bàn phím cơ",
+      "description": "Bàn phím cơ có dây, Switch ROG RX Red, đèn nền RGB Aura Sync, bộ nhớ tích hợp",
+      "image": "https://cdn.hoanghamobile.com/i/content/Uploads/2023/05/23/11.png",
+      "brand": "Asus",
+      "rating": 2,
+      "isShow": true
+    },
+    {
+      "id": "0a3e",
+      "name": "Trần Cao Sơn",
+      "price": 123123,
+      "brand": "Apple",
+      "description": "dfsdfsadf",
+      "image": "",
+      "rating": 3,
+      "category": "Bàn Phím Văn Phòng"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Bàn phím cơ"
+    },
+    {
+      "id": "2",
+      "name": "Bàn phím văn phòng"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "caosontr",
+      "email": "caosontr@gmail.com"
+    },
+    {
+      "id": "2",
+      "username": "kaoxown",
+      "email": "kaoxown@gmail.com"
+    },
+    {
+      "id": "3",
+      "username": "lily",
+      "email": "lily@gmail.com"
+    },
+    {
+      "id": "82a2",
+      "fullName": "sdasd",
+      "email": "caosontr@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "dd49",
+      "fullName": "kaoxown",
+      "email": "caosontr@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "16dd",
+      "fullName": "caosontr",
+      "email": "caosontr@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "418a",
+      "username": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "99a2",
+      "username": "kaoxown",
+      "email": "caosontr@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "923a",
+      "username": "kaoxown",
+      "email": "test@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "a1ec",
+      "fullName": "kaoxown",
+      "email": "caosontr@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "24d1",
+      "email": "caosontr@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "d08f",
+      "email": "123231",
+      "username": "kaoxown",
+      "password": "1234"
+    },
+    {
+      "id": "69bd",
+      "email": "caosontr@gmail.com",
+      "username": "kaoxown",
+      "password": "123"
+    },
+    {
+      "id": "5b5e",
+      "email": "caosontr@gmail.com",
+      "username": "kaoxown",
+      "password": "123"
+    },
+    {
+      "id": "5192",
+      "email": "123",
+      "username": "kaoxown",
+      "password": ""
+    },
+    {
+      "id": "4762",
+      "email": "",
+      "username": "",
+      "password": ""
+    },
+    {
+      "id": "a2fd",
+      "email": "caosontr@gmail.com",
+      "username": "kaoxown",
+      "password": "123"
+    },
+    {
+      "id": "1ff7",
+      "email": "caosontr@gmail.com",
+      "username": "kaoxown",
+      "password": "123"
+    },
+    {
+      "id": "cfb0",
+      "email": "kaoxown1@gmail.com",
+      "username": "kaoxown",
+      "password": "123"
+    },
+    {
+      "id": "8a00",
+      "email": "caosont1r@gmail.com",
+      "username": "kaoxown",
+      "password": "123"
+    }
+  ]
+}

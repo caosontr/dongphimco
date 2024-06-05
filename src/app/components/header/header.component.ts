@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { RegisterComponent } from '../../pages/register/register.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgFor, RouterLink, RegisterComponent],
+  imports: [NgFor, RouterLink,],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })
