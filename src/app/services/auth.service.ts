@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 })
 export class AuthService {
 
-  private userURL = 'https://json-server-q4dz.onrender.com/';
+  private userURL = 'https://json-server-q4dz.onrender.com';
 
   constructor(private http: HttpClient) { }
 
