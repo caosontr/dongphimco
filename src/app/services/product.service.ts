@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 export class ProductService {
   // instance
   http = inject(HttpClient);
-  apiURL = 'http://localhost:3000/products';
+  apiURL = 'https://json-server-q4dz.onrender.com/products';
 
   constructor() {}
   searchProducts(name: string): Observable<any> {
