@@ -11,7 +11,8 @@ import { Observable } from 'rxjs';
 export class ProductService {
   // instance
   http = inject(HttpClient);
-  apiURL = 'https://json-server-q4dz.onrender.com/products';
+  // apiURL = 'https://json-server-q4dz.onrender.com/products';
+  apiURL = 'http://localhost:3000/products';
 
   constructor() {}
   searchProducts(name: string): Observable<any> {
@@ -30,6 +31,9 @@ export class ProductService {
     return this.http.post<Product>(this.apiURL, product);
   }
   // updateProduct
+  editProduct(id: string, data: Product) {
+    return this.http.put(`${this.apiURL}/${id}`, data);
+  }
   // deleteProduct
   handleDeleteProduct(productId: string) {
     const url = `${this.apiURL}/${productId}`;

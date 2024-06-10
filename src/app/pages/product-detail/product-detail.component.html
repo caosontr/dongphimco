@@ -1,13 +1,11 @@
 <app-header></app-header>
 <div class="bg-white py-6 sm:py-8 lg:py-12">
-  <div class="mx-auto max-w-screen-lg px-4 md:px-8">
-    @if (product) {
+  <div class="mx-auto max-w-screen-lg px-4 md:px-8" *ngIf="product">
     <div class="grid gap-8 md:grid-cols-2">
-      <!-- images - start -->
       <div class="space-y-4">
         <div class="relative overflow-hidden rounded-lg bg-gray-100">
           <img
-            [src]="product.data.image"
+            [src]="product.image"
             loading="lazy"
             alt="Photo by Himanshu Dewangan"
             class="h-full w-full object-cover object-center"
@@ -19,50 +17,41 @@
           >
         </div>
       </div>
-      <!-- images - end -->
 
-      <!-- content - start -->
       <div class="md:py-8">
-        <!-- name - start -->
         <h2 class="text-2xl font-bold text-gray-800 lg:text-3xl">
-          {{ product.data.name }}
+          {{ product.name }}
         </h2>
         <div class="mb-2 md:mb-3">
           <span class="p-1 mb-0.5 inline-block text-gray-500">{{
-            product.data.brand
+            product.brand
           }}</span>
         </div>
-        <!-- name - end -->
-        <!-- price - start -->
         <div class="mb-4">
           <div class="flex items-end gap-2">
             <div class="mb-3 text-lg font-semibold text-gray-800">
               Price:
               <span class="text-xl font-bold text-red-600 md:text-2xl"
-                >{{ product.data.price }} VNĐ</span
-              >s
+                >{{ product.price }} VNĐ</span
+              >
             </div>
           </div>
-
-          <span class="text-sm text-gray-500">incl. VAT plus shipping</span>
+ 
+          <span class="text-sm text-gray-500">VAT plus shipping</span>
         </div>
-        <!-- price - end -->
-        <!-- description - start -->
         <div class="">
           <div class="mb-3 text-lg font-semibold text-gray-800">
             Description:
             <span class="text-gray-500">
-              {{ product.data.description }}
+              {{ product.description }}
             </span>
           </div>
         </div>
-        <!-- description - end -->
-        <!-- rating - start -->
         <div class="mb-6 flex items-center md:mb-10">
           <div
             class="-ml-1 flex gap-0.5"
             class="crop"
-            [style.width.px]="(product.data.rating * 70) / 5"
+            [style.width.px]="(product.rating * 70) / 5"
             title="rating"
           >
             <div style="width: 90px">
@@ -74,9 +63,7 @@
             </div>
           </div>
         </div>
-        <!-- rating - end -->
 
-        <!-- shipping notice - start -->
         <div class="mb-6 flex items-center gap-2 text-gray-500">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -98,9 +85,6 @@
 
           <span class="text-sm">2-4 day shipping</span>
         </div>
-        <!-- shipping notice - end -->
-
-        <!-- buttons - start -->
         <div class="flex gap-2.5">
           <a
             href="#"
@@ -128,11 +112,8 @@
             </svg>
           </a>
         </div>
-        <!-- buttons - end -->
       </div>
-      <!-- content - end -->
     </div>
-    }
   </div>
 </div>
 

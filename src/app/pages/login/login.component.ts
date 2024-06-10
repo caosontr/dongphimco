@@ -1,55 +1,85 @@
-import { Component } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { MessageService } from 'primeng/api';
+import { Component, inject } from '@angular/core';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { NgIf } from '@angular/common';
 import Swal from 'sweetalert2';
 
+// Import PrimeNG modules
+import { CardModule } from 'primeng/card';
+import { ButtonModule } from 'primeng/button';
+import { InputTextModule } from 'primeng/inputtext';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-login',
-  standalone: true, 
-  imports: [ReactiveFormsModule, NgIf],
+  standalone: true,
+  imports: [
+    ReactiveFormsModule,
+    NgIf,
+    CardModule,
+    ButtonModule,
+    InputTextModule,
+  ], // Include PrimeNG modules here
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
-  export class LoginComponent {
-    loginForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required]
-    })
+export class LoginComponent {
+  authservice = inject(AuthService);
+  router = inject(Router);
 
-    constructor(
-      private fb: FormBuilder,
-      private authService: AuthService,
-      private router: Router,
-    ) { }
-
-    get email() {
-      return this.loginForm.controls['email'];
-    }
-    get password() { return this.loginForm.controls['password']; }
-
-    loginUser() {
-      const { email, password } = this.loginForm.value;
-      this.authService.getUserByEmail(email as string).subscribe(
-        response => {
-          if (response.length > 0 && response[0].password === password) {
-            sessionStorage.setItem('email', email as string);
-            Swal.fire({
-              position: "center",
-              icon: "success",
-              title: "Đăng nhập thành công!!!",
-              showConfirmButton: false,
-              timer: 1500
-            });
-            this.router.navigate(['/home']);
-          } else {
-          }
-        },
-        error => {
-        }
-
-      )
-    }
+  userForm: FormGroup = new FormGroup({
+    username: new FormControl('', Validators.required),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    password: new FormControl('', [
+      Validators.required,
+      Validators.minLength(6),
+    ]),
+  });
+  get username() {
+    return this.userForm.controls['username'];
   }
+
+  get email() {
+    return this.userForm.controls['email'];
+  }
+
+  get password() {
+    return this.userForm.controls['password'];
+  }
+
+  handleSubmit() {
+    console.log(this.userForm.value);
+    this.authservice.loginUser(this.userForm.value).subscribe(
+      (data) => {
+        console.log(data);
+        localStorage.setItem(
+          'token',
+          (data as { accessToken: string }).accessToken
+        );
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Đăng nhập thành công!!!',
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        this.router.navigate(['/']);
+      },
+      (error) => {
+        Swal.fire({
+          position: 'center',
+          icon: 'error',
+          title: 'Thông tin tài khoản mật khẩu không ch!!!',
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      }
+    );
+  }
+}

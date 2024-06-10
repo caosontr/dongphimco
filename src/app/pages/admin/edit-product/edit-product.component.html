@@ -31,7 +31,7 @@
     </div>
     <div class="bg-white py-6 sm:py-8 lg:py-12">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <form>
+        <form [formGroup]="addProductForm" (ngSubmit)="handleSubmit()">
           <div>
             <div class="border-b border-gray-900/10 pb-12">
               <div
@@ -48,6 +48,7 @@
                       name="name"
                       id="name"
                       type="text"
+                      formControlName="name"
                       class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
@@ -64,6 +65,7 @@
                       name="brand"
                       id="brand"
                       type="text"
+                      formControlName="brand"
                       class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
@@ -80,6 +82,7 @@
                       name="price"
                       id="price"
                       type="number"
+                      formControlName="price"
                       class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
@@ -96,6 +99,7 @@
                       name="rating"
                       type="number"
                       max="5"
+                      formControlName="rating"
                       class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
@@ -111,7 +115,7 @@
                     <select
                       name="category"
                       id="country"
-                      autocomplete="country-name"
+                      formControlName="category"
                       class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
                     >
                       <option>Bàn Phím Cơ</option>
@@ -145,6 +149,7 @@
                   <div class="mt-2">
                     <textarea
                       name="description"
+                      formControlName="description"
                       class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     >
                     </textarea>

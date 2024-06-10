@@ -23,14 +23,14 @@
       "isShow": true
     },
     {
-      "id": "0a3e",
-      "name": "Trần Cao Sơn",
-      "price": 123123,
-      "brand": "Apple",
-      "description": "dfsdfsadf",
-      "image": "",
-      "rating": 3,
-      "category": "Bàn Phím Văn Phòng"
+      "name": "Bàn phím cơ AKKO 3108 RF Dragon Ball Z Goku Akko V3 Cream Yellow switch",
+      "image": "https://product.hstatic.net/200000722513/product/1nohih66_d01c566df941499ba74e41d07a77e3bb_grande.png",
+      "category": "Bàn Phím Cơ",
+      "price": 1690000,
+      "brand": "AKKO ",
+      "description": "Trong thời đại công nghệ phát triển mạnh mẽ, việc sở hữu một chiếc bàn phím máy tính không chỉ đơn thuần là nhu cầu mà còn là sự khẳng định cá tính và sở thích của mỗi cá nhân. Một sản phẩm nổi bật không thể bỏ qua chính là bàn phím cơ AKKO 3108 RF Dragon Ball Z Goku. Đây là lựa chọn hoàn hảo cho những ai vừa yêu thích công nghệ vừa là fan hâm mộ bộ truyện tranh Dragon Ball Z nổi tiếng.",
+      "rating": 4,
+      "id": "qQbWdfl"
     }
   ],
   "categories": [
@@ -45,120 +45,28 @@
   ],
   "users": [
     {
-      "id": "1",
-      "username": "caosontr",
-      "email": "caosontr@gmail.com"
-    },
-    {
-      "id": "2",
+      "email": "caosontr123@gmail.com",
+      "password": "$2a$10$FW8X6ZwVZN1ttZGBPzeQ6e4zOESw18/F2juna.3FTnn0XR7Fcw9Um",
       "username": "kaoxown",
-      "email": "kaoxown@gmail.com"
+      "id": "KX1nANa"
     },
     {
-      "id": "3",
-      "username": "lily",
-      "email": "lily@gmail.com"
+      "email": "caosont1231r@gmail.com",
+      "password": "$2a$10$fcQMQUAH/qEs9HZBQDMpseFFyUd6rA6XrgUQ5Fe4RTRC1VELeY.tO",
+      "username": "kaoxown",
+      "id": "CfEWwbg"
     },
     {
-      "id": "82a2",
-      "fullName": "sdasd",
+      "email": "caosont1123231r@gmail.com",
+      "password": "$2a$10$/3kjqZcGKaKIv/SgAm4u0uL17XsiNpLvGXeyKlmPgjHC4u2ErZ.la",
+      "username": "kaoxown",
+      "id": "lPYLnya"
+    },
+    {
       "email": "caosontr@gmail.com",
-      "password": "123456"
-    },
-    {
-      "id": "dd49",
-      "fullName": "kaoxown",
-      "email": "caosontr@gmail.com",
-      "password": "123456"
-    },
-    {
-      "id": "16dd",
-      "fullName": "caosontr",
-      "email": "caosontr@gmail.com",
-      "password": "123456"
-    },
-    {
-      "id": "418a",
-      "username": "",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "99a2",
+      "password": "$2a$10$./YOsXSUril7tZy/i0G/YeuqiurENADdRn2D39jGfE5eSAnKUoJs.",
       "username": "kaoxown",
-      "email": "caosontr@gmail.com",
-      "password": "123456"
-    },
-    {
-      "id": "923a",
-      "username": "kaoxown",
-      "email": "test@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "a1ec",
-      "fullName": "kaoxown",
-      "email": "caosontr@gmail.com",
-      "password": "12345"
-    },
-    {
-      "id": "24d1",
-      "email": "caosontr@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "d08f",
-      "email": "123231",
-      "username": "kaoxown",
-      "password": "1234"
-    },
-    {
-      "id": "69bd",
-      "email": "caosontr@gmail.com",
-      "username": "kaoxown",
-      "password": "123"
-    },
-    {
-      "id": "5b5e",
-      "email": "caosontr@gmail.com",
-      "username": "kaoxown",
-      "password": "123"
-    },
-    {
-      "id": "5192",
-      "email": "123",
-      "username": "kaoxown",
-      "password": ""
-    },
-    {
-      "id": "4762",
-      "email": "",
-      "username": "",
-      "password": ""
-    },
-    {
-      "id": "a2fd",
-      "email": "caosontr@gmail.com",
-      "username": "kaoxown",
-      "password": "123"
-    },
-    {
-      "id": "1ff7",
-      "email": "caosontr@gmail.com",
-      "username": "kaoxown",
-      "password": "123"
-    },
-    {
-      "id": "cfb0",
-      "email": "kaoxown1@gmail.com",
-      "username": "kaoxown",
-      "password": "123"
-    },
-    {
-      "id": "8a00",
-      "email": "caosont1r@gmail.com",
-      "username": "kaoxown",
-      "password": "123"
+      "id": "2c-56us"
     }
   ]
 }

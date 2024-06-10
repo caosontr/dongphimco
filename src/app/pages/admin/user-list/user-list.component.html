@@ -33,7 +33,6 @@
         <input
           type="text"
           #searchInput
-          (input)="searchProduct(searchInput.value)"
           class="block p-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           placeholder="Search for products"
         />
@@ -68,77 +67,44 @@
         class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
       >
         <tr>
-          <th scope="col" class="px-6 py-3">Product Image</th>
-          <th scope="col" class="px-6 py-3">Product Name</th>
-          <th scope="col" class="px-6 py-3">Brand</th>
-          <th scope="col" class="px-6 py-3">Category</th>
-          <th scope="col" class="px-6 py-3">Price</th>
-          <th scope="col" class="px-6 py-3">Description</th>
-          <th scope="col" class="px-6 py-3">Rating</th>
-          <th scope="col" class="px-6 py-3">Actions</th>
+          <th scope="col" class="px-6 py-3">ID</th>
+          <th scope="col" class="px-6 py-3">UserName</th>
+          <th scope="col" class="px-6 py-3">Email</th>
+          <th>Action</th>
         </tr>
       </thead>
       <tbody>
-        @for (product of filteredProducts; track product.id){
-        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-          <td class="px-6 py-4">
-            <img
-              src="{{ product.image }}"
-              class="w-20 h-20 object-cover rounded-md"
-            />
+        <tr
+          *ngFor="let user of users"
+          class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+        >
+          <td
+            scope="row"
+            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+          >
+            {{ user.id }}
           </td>
           <td
             scope="row"
             class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
           >
-            {{ product.name }}
+            {{ user.username }}
           </td>
           <td
             scope="row"
             class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
           >
-            {{ product.brand }}
-          </td>
-          <td class="px-6 py-4 text-gray-900 dark:text-white">
-            {{ product.category }}
-          </td>
-          <td class="px-6 py-4 text-gray-900 dark:text-red-600">
-            {{ product.price }} VNĐ
-          </td>
-          <td class="px-6 py-4 text-gray-900 dark:text-white">
-            {{ product.description }}
+            {{ user.email }}
           </td>
           <td>
-            <div
-              class="crop"
-              [style.width.px]="(product.rating * 65) / 5"
-              title="rating"
-            >
-              <div style="width: 90px">
-                <span class="fa fa-star text-yellow-400"></span>
-                <span class="fa fa-star text-yellow-400"></span>
-                <span class="fa fa-star text-yellow-400"></span>
-                <span class="fa fa-star text-yellow-400"></span>
-                <span class="fa fa-star text-yellow-400"></span>
-              </div>
-            </div>
-          </td>
-
-          <td class="px-6 py-4 text-right">
-            <a
-              class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-              [routerLink]="['/admin/edit-product', product.id]"
-              >Edit</a
-            >
             <button
               class="font-medium text-red-600 dark:text-red-500 hover:underline ml-4"
-              (click)="handleDeleteProduct(product.id)"
+              (click)="handleDeleteUser(user.id)"
             >
               Delete
             </button>
           </td>
         </tr>
-        }
       </tbody>
     </table>
   </div>

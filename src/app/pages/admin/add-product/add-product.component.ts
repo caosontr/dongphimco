@@ -17,19 +17,36 @@ export class AddProductComponent {
   router = inject(Router);
 
   productAdd = {
-  name: '',
-  price: 0,
-  brand: '',
-  description: '',
-  image: '',
-  rating: 0,
-  category: ' '
-
+    name: '',
+    price: 0,
+    brand: '',
+    description: '',
+    image: '',
+    rating: 0,
+    category: ' ',
   };
 
   handleSubmit() {
-    this.productService
-      .createProduct(this.productAdd)
-      .subscribe(() => this.router.navigate(['/admin/products']));
+    this.productService.createProduct(this.productAdd).subscribe(
+      (response) => {
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Tạo sản phẩm thành công!!!',
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        this.router.navigate(['/admin/products']);
+      },
+      (error) => {
+        Swal.fire({
+          position: 'center',
+          icon: 'error',
+          title: 'Có lỗi xảy ra khi tạo sản phẩm!!!',
+          showConfirmButton: true,
+        });
+        console.error('Error creating product:', error);
+      }
+    );
   }
 }
